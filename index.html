@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tibicle Task</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-part bg-primary d-flex align-items-center py-16 px-24">
+            <a href="#">
+                <img class="mr-16" src="./assets/images/left-arrow.svg" alt="">
+            </a>
+            <h1 class="text-white font-18 m-0">Schedule Appointment</h1>
+        </div>
+    </header>
+
+    <section class="user-profile mb-24">
+        <img class="dog-img" src="./assets/images/dog-img.jpg" alt="">
+        <div class="bg-primary profile-title d-flex align-items-center">
+            <img class="user-img mr-16" src="./assets/images/user-img.jpg" alt="">
+            <h2 class="text-white font-18 m-0">Michlle prince</h2>
+        </div>
+    </section>
+
+    <section class="px-8 calendar-section">
+        <div class="d-flex align-items-center justify-content-between mb-16">
+            <h3 class="font-weight-bold font-14 m-0">When? Choose a date and time</h3>
+            <div class="d-flex">
+                <select class="form-control custom-form-control" id="yearMonthInput"></select>
+            </div>
+        </div>
+        <div class="d-flex align-items-center select-date-time pb-24">
+            <button class="text-center date-time active mr-8">
+                <h3 class="font-14 mb-4 m-0">23</h3>
+                <span class="m-0 font-12">Mon</span>
+            </button>
+            <button class="text-center date-time mr-8">
+                <h3 class="font-14 mb-4 m-0">24</h3>
+                <span class="m-0 font-12">Tue</span>
+            </button>
+            <button class="text-center date-time mr-8">
+                <h3 class="font-14 mb-4 m-0">25</h3>
+                <span class="m-0 font-12">Wed</span>
+            </button>
+            <button class="text-center date-time mr-8">
+                <h3 class="font-14 mb-4 m-0">26</h3>
+                <span class="m-0 font-12">Thur</span>
+            </button>
+            <button class="text-center date-time mr-8 select">
+                <h3 class="font-14 mb-4 m-0">27</h3>
+                <span class="m-0 font-12">Fir</span>
+            </button>
+            <button class="text-center date-time mr-8">
+                <h3 class="font-14 mb-4 m-0">28</h3>
+                <span class="m-0 font-12">Sat</span>
+            </button>
+            <button class="text-center date-time mr-8">
+                <h3 class="font-14 mb-4 m-0">29</h3>
+                <span class="m-0 font-12">Sun</span>
+            </button>
+        </div>
+        <div class="time-of-day mb-16">
+            <h3 class="font-weight-bold font-14 mt-0">Time of ay</h3>
+            <form>
+                <label>
+                    <input name="plan" class="d-none select-time" type="radio">
+                    <p class="time">01:00-02:00</p>
+                </label>
+                <label>
+                    <input name="plan" class="d-none select-time" type="radio" checked>
+                    <p class="time">01:00-02:00</p>
+                </label>
+                <label>
+                    <input name="plan" class="d-none select-time" type="radio">
+                    <p class="time">01:00-02:00</p>
+                </label>
+                <label>
+                    <input name="plan" class="d-none select-time" type="radio">
+                    <p class="time select-time-bg">01:00-02:00</p>
+                </label>
+                <label>
+                    <input name="plan" class="d-none select-time" type="radio">
+                    <p class="time">01:00-02:00</p>
+                </label>
+                <label>
+                    <input name="plan" class="d-none select-time" type="radio">
+                    <p class="time">01:00-02:00</p>
+                </label>
+                <label>
+                    <input name="plan" class="d-none select-time" type="radio">
+                    <p class="time">01:00-02:00</p>
+                </label>
+                <label>
+                    <input name="plan" class="d-none select-time" type="radio">
+                    <p class="time">01:00-02:00</p>
+                </label>
+                <label>
+                    <input name="plan" class="d-none select-time" type="radio">
+                    <p class="time">01:00-02:00</p>
+                </label>
+                <label>
+                    <input name="plan" class="d-none select-time" type="radio">
+                    <p class="time">01:00-02:00</p>
+                </label>
+                <label>
+                    <input name="plan" class="d-none select-time" type="radio">
+                    <p class="time">01:00-02:00</p>
+                </label>
+            </form>
+        </div>
+
+        <a href="#" class="font-14 d-flex align-items-center justify-content-between opening-hours mb-36">
+            Opening Hours
+            <img class="ml-4" src="./assets/images/right-arrow.svg" alt="">
+        </a>
+
+        <div class="mx-12 mb-16 mt-16">
+            <button class="btn-next">Next</button>
+        </div>
+    </section>
+
+
+</body>
+
+<script>
+    var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+    for (i = new Date().getFullYear(); i > 2008; i--) {
+        $.each(months, function (index, value) {
+            $('#yearMonthInput').append($('<option />').val(index + "_" + i).html(value + " " + i));
+        });
+    }
+</script>
+
+</html>

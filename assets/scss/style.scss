@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* text color  */
+.text-white {
+  color: #ffffff;
+}
+
+// background color 
+.bg-primary {
+  background-color: #cc49a6;
+}
+
+// flex 
+.d-none {
+  display: none;
+}
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+// padding 
+.py-16 {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.px-8 {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.px-24 {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.pb-24 {
+  padding-bottom: 24px;
+}
+
+.p-8 {
+  padding: 8px;
+}
+
+// margin 
+.mr-16 {
+  margin-right: 16px;
+}
+
+.mb-24 {
+  margin-bottom: 24px;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.ml-4 {
+  margin-left: 4px;
+}
+
+.mb-4 {
+  margin-bottom: 4px;
+}
+
+.mb-8 {
+  margin-bottom: 8px;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.mb-36 {
+  margin-bottom: 36px;
+}
+
+.mr-8 {
+  margin-right: 8px;
+}
+
+.mx-12 {
+  margin-right: 12px;
+  margin-left: 12px;
+}
+
+// font size
+.font-18 {
+  font-size: 18px;
+}
+
+.font-14 {
+  font-size: 14px;
+}
+
+.font-12 {
+  font-size: 12px;
+}
+
+// font weight 
+.font-weight-bold {
+  font-weight: 700;
+}
+
+/* section  */
+.user-profile {
+
+  .dog-img {
+    width: 100%;
+    height: 50vw;
+    object-fit: cover;
+    filter: brightness(0.7);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .profile-title {
+    padding: 20px 16px;
+    border-radius: 4px;
+    margin: -68px 24px 0 24px;
+    position: relative;
+
+
+    .user-img {
+      min-width: 70px;
+      height: 70px;
+      border-radius: 100px;
+      border: 3px solid #ffffff;
+      object-fit: cover;
+    }
+  }
+}
+
+// date time section 
+.calendar-section {
+
+  .select-date-time {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .date-time {
+      position: relative;
+      min-width: 45px;
+      height: 45px;
+      border: 1px solid #dcdcdc;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 2px;
+      background-color: transparent;
+      cursor: pointer;
+
+      &.active {
+        background-color: #cc49a6;
+        color: #ffffff;
+        border: 1px solid #cc49a6;
+        z-index: 9;
+
+        &::after {
+          position: absolute;
+          content: "";
+          border-left: 6px solid transparent;
+          border-right: 6px solid transparent;
+          border-bottom: 6px solid transparent;
+          border-top: 6px solid #cc49a6;
+          bottom: -12px;
+        }
+      }
+
+      &.select {
+        background-color: #d6d6d6;
+      }
+
+    }
+  }
+
+  .time-of-day {
+
+    .select-time {
+      &:checked {
+        & + .time {
+          border: 1px solid #cc49a6;
+          background-color: #cc49a6;
+          color: #ffffff; 
+        }
+      }
+    }
+
+    .time {
+      border: 1px solid #dcdcdc;
+      padding: 8px;
+      font-size: 12px;
+      border-radius: 4px;
+      margin: 0 8px 8px 0;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .select-time-bg {
+      background-color: #d6d6d6;
+    }
+
+   
+  }
+
+  .opening-hours {
+    padding: 12px;
+    border: 1px solid #dcdcdc;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+  }
+
+  .btn-next {
+    background-color: #cc49a6;
+    border: 0;
+    padding: 12px;
+    width: 100%;
+    border-radius: 4px;
+    color: #ffffff;
+
+    &:hover,
+    &:active {
+      background-color: #b1318c;
+    }
+  }
+
+  .custom-form-control {
+    border: 0;
+    font-size: 12px;
+    font-weight: bold;
+    appearance: none;
+    cursor: pointer;
+    background-image: url('../../assets/images/top-arrow.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 14px;
+    padding-right: 16px;
+
+    &:focus-visible {
+      outline: 0;
+    }
+  }
+
+}
+
